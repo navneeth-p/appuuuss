@@ -6,6 +6,8 @@ export default defineConfig({
   base: './',
   build: {
     target: 'esnext', // top-level await + wasm support for rapier3d-compat
+    outDir: 'docs', // GitHub Pages serves the built site from /docs
+    emptyOutDir: true,
   },
   optimizeDeps: {
     // rapier3d-compat ships wasm; let it resolve natively rather than prebundling
